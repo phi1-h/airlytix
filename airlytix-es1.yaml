@@ -71,16 +71,7 @@ interval:
         condition:
           wifi.connected:
         then:
-          - if:
-              condition:
-                api.connected:
-              then:
-                - output.turn_off: status_led_2
-              else:
-                - output.turn_on: status_led_2
-                - delay: 500ms
-                - output.turn_off: status_led_2
-                - delay: 500ms
+          - output.turn_off: status_led_2
         else:
           - output.turn_on: status_led_2
           - delay: 200ms
