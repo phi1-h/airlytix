@@ -60,7 +60,6 @@ dashboard_import:
 external_components:
   - source: github://phi1-h/airlytix@main
   
-prometheus:
 
 wifi:
   ap:
@@ -72,6 +71,12 @@ esp32_improv:
 
 improv_serial:
 
+# Provide a /metrics endpoint for Prometheus
+prometheus:
+web_server:
+  port: 9926
+  version: 1
+  
 interval:
   - interval: 1s
     then:
