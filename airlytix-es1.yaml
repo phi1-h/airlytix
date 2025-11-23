@@ -48,6 +48,11 @@ esp32:
 logger:
 
 api:
+# Example configuration entry
+web_server:
+
+# Activates prometheus /metrics endpoint
+prometheus:
 
 ota:
   platform: esphome
